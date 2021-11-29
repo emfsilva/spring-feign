@@ -10,6 +10,7 @@ import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @EqualsAndHashCode
@@ -17,6 +18,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "tb_worker")
+@Getter
 public class Worker implements Serializable {
 	private static final long serialVersionUID = 415200644158993512L;
 	
@@ -27,17 +29,5 @@ public class Worker implements Serializable {
 	private Double dailyIncome;
 	public Long getId() {
 		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public Double getDailyIncome() {
-		return dailyIncome;
 	}
 }
